@@ -79,7 +79,7 @@ class ClientesActivosByDiscoteca(APIView):
     def get(self, request, nombreDisco):
         discoteca = CustomUser.objects.get(username=nombreDisco)
         clientes = Clientes.objects.filter(discoteca=discoteca, estado=True)
-        serializer = ClientesActivosSerializers(clientes, many=True)
+        serializer = ClientesSerializers(clientes, many=True)
         return Response(serializer.data)
 
 
