@@ -133,3 +133,17 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 #Utilizar el modelo con los campos agregados en el userAdmin
 AUTH_USER_MODEL = 'backend.CustomUser'
+
+#Configuracion de la carpeta donde se guardan las fotos 
+
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+#Configuracion para la visualizacion de fotos 
+
+STATIC_URL = 'media/usersImages/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "media/usersImages"),
+]

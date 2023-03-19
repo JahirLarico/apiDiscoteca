@@ -15,7 +15,7 @@ class ClientesSerializers(serializers.ModelSerializer):
     historial = HistorialSerializers(many=True, read_only=True)
     class Meta:
         model = Clientes
-        fields = ('id', 'nombre', 'dni', 'edad', 'estado','historial')
+        fields = ('id', 'nombre', 'dni', 'edad', 'estado','historial','userFoto')
 
 class DiscotecaSerializers(serializers.ModelSerializer):
     #Añadir las subclases dentro del array

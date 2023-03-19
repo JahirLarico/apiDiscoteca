@@ -16,6 +16,7 @@ class Clientes(models.Model):
     dni = models.CharField(max_length=9, unique=True)
     edad = models.IntegerField()
     estado = models.BooleanField(default=False)
+    userFoto = models.ImageField(upload_to='usersImages', null=True)
 
     def __str__(self):
         return self.nombre
